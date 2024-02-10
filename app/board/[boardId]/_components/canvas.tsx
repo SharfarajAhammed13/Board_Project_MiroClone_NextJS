@@ -18,7 +18,7 @@ export const Canvas = ({
         <main
             className="h-full w-full relative bg-neutral-200 touch-none"
         >
-            <Info/>
+            <Info boardId={boardId}/>
             <Participants/>
             <Toolbar/>
         </main>

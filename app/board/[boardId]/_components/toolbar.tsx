@@ -18,8 +18,8 @@ export const Toolbar =({
     setCanvasState,
     undo,
     redo,
-    canRedo,
     canUndo,
+    canRedo,
 }: ToolBarProps) => {
     return (
         <div className="absolute top-[50%] -translate-y-[50%] left-2 flex flex-col gap-y-4">
@@ -27,7 +27,9 @@ export const Toolbar =({
                 <ToolButton
                     label="Select"
                     icon={MousePointer2}
-                    onClick={()=>setCanvasState({mode: CanvasMode.None})}
+                    onClick={()=>setCanvasState({
+                        mode: CanvasMode.None
+                    })}
                     isActive={
                         canvasState.mode === CanvasMode.None || 
                         canvasState.mode === CanvasMode.Translating ||

@@ -19,6 +19,7 @@ import { CursorPresence } from "./cursors-presence";
 import { connectionIdToColor, pointerEventToCanvasPoint, resizeBounds } from "@/lib/utils";
 import { LiveObject } from "@liveblocks/client";
 import { LayerPreview } from "./layer-preview";
+import { SelectionTools } from "./selection-tools";
 import { SelectionBox } from "./selection-box";
 
 const MAX_LAYERS = 100;
@@ -37,7 +38,7 @@ export const Canvas = ({
         mode: CanvasMode.None,
     });
     const [camera, setCamera] = useState<Camera>({ x:0, y:0});
-    const [lastUsedColor, setUsedColor] = useState<Color>({
+    const [lastUsedColor, setLastUsedColor] = useState<Color>({
         r:0,
         g:0,
         b:0,
@@ -284,6 +285,10 @@ export const Canvas = ({
                 undo={history.undo}
                 redo={history.redo}
             />
+            <SelectionTools
+                camera={camera}
+                setLastUsedColor={setLastUsedColor}
+            />
             <svg
                 className="h-[100vh] w-[100vw]"
                 onWheel={onWheel}
@@ -307,7 +312,7 @@ export const Canvas = ({
                         />
 
                     ))}
-                    <SelectionBox 
+                    <SelectionBox
                     onResizeHandlePointerDown={onResizeHandlePointerDown}/>
                     <CursorPresence/>
                 </g>

@@ -16,12 +16,13 @@ export const EmptyOrg = () => {
                 alt="empty"
                 height={200}
                 width={200}
+                priority
            />
            <h2 className="text-2xl font-semibold mt-6">
             Welcome To Board
            </h2>
            <p className="text-muted-foreground text-sm mt-2">
-            Create a organization to get started
+            Create an organization to get started
            </p>
            <div className="mt-6">
                 <Dialog>
@@ -36,5 +37,5 @@ export const EmptyOrg = () => {
                 </Dialog>
            </div>
         </div>
-    )
-}
+    );
+};

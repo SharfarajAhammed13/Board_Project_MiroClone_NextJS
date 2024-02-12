@@ -6,7 +6,7 @@ interface EllipseProps {
   layer: EllipseLayer;
   onPointerDown: (e: React.PointerEvent, id: string) => void;
   selectionColor?: string;
-};
+}
 
 export const Ellipse = ({
   id,

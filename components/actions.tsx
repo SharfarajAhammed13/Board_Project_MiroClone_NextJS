@@ -79,6 +79,7 @@ export const Actions = ({
                     header="Delete Board?"
                     description="This will delete the board and all of it's contents."
                     onConfirm={onDelete}
+                    disabled={pending}
                 >
                     <Button
                     variant="ghost"

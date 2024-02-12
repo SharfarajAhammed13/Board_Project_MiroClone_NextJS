@@ -4,7 +4,6 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import React from "react";
 
 export interface HintProps {
     label: string;

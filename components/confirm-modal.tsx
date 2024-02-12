@@ -36,7 +36,7 @@ export const ConfirmModal = ({
 
     return (
         <AlertDialog>
-            <AlertDialogTrigger>
+            <AlertDialogTrigger asChild>
                 {children}
             </AlertDialogTrigger>
             <AlertDialogContent>

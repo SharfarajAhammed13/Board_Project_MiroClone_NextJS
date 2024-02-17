@@ -41,7 +41,7 @@ import { Participants } from "./participants";
 import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
-import { CursorPresence } from "./cursors-presence";
+import { CursorsPresence } from "./cursors-presence";
 
 const MAX_LAYERS = 100;
 
@@ -499,7 +499,7 @@ export const Canvas = ({
               height={Math.abs(canvasState.origin.y - canvasState.current.y)}
             />
           )}
-          <CursorPresence />
+          <CursorsPresence />
           {pencilDraft != null && pencilDraft.length > 0 && (
             <Path
               points={pencilDraft}

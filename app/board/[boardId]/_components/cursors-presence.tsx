@@ -12,9 +12,12 @@ const Cursors = () => {
 
   return (
     <>
-      {ids.map((connectionId) => {
-        <Cursor key={connectionId} connectionId={connectionId} />;
-      })}
+      {ids.map((connectionId) => (
+        <Cursor 
+        key={connectionId} 
+        connectionId={connectionId} 
+        />
+      ))}
     </>
   );
 };
@@ -24,9 +27,7 @@ const Drafts = () => {
     (other) => ({
       pencilDraft: other.presence.pencilDraft,
       penColor: other.presence.penColor,
-    }),
-    shallow
-  );
+    }),shallow);
 
   return (
     <>
@@ -49,7 +50,7 @@ const Drafts = () => {
   );
 };
 
-export const CursorPresence = memo(() => {
+export const CursorsPresence = memo(() => {
   return (
     <>
       <Drafts />
@@ -58,4 +59,4 @@ export const CursorPresence = memo(() => {
   );
 });
 
-CursorPresence.displayName = "CursorPresence";
+CursorsPresence.displayName = "CursorsPresence";

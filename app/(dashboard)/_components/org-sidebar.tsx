@@ -25,7 +25,9 @@ export const OrgSidebar = () => {
                         src="/logo.svg"
                         alt="Logo"
                         height={40}
-                        width={40} />
+                        width={40}
+                        priority
+                        />
                             <span className={cn(
                                 "font-semibold text-2xl", font.className,
                             )}>

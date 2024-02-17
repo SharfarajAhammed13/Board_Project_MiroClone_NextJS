@@ -18,7 +18,8 @@ export const Room = ({
     fallBack
 }: RoomProps) => {
     return(
-        <RoomProvider id={roomId} initialPresence={{
+        <RoomProvider id={roomId} 
+        initialPresence={{
             cursor: null,
             selection: [],
             pencilDraft: null,
@@ -31,9 +32,7 @@ export const Room = ({
         >
         <ClientSideSuspense fallback={fallBack}>
             {() => children}
-
         </ClientSideSuspense>
-
     </RoomProvider>
     );
     
